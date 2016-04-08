@@ -1,0 +1,179 @@
+body { 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px; 
+	color: #000000;
+	background-color: #F9F9F9;
+} 
+
+p { 
+	width: 80%; 
+}
+ 
+ul, li {
+	list-style: none;
+}
+
+ul{
+	overflow: hidden;
+	padding: 1em;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #000;
+	background: #ffc;
+	display: block;
+	height: 6em;
+	width: 9em;
+	padding: 1em;
+	/* Firefox */
+	-moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+	/* Safari+Chrome */
+	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+	/* Opera */
+	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+ul li{
+	margin: 1em;
+	float: left;
+}
+
+ul li h2{
+	font-size: 100%;
+	font-weight: regular;
+	padding-bottom: 10px;
+}
+
+ul li p{
+	font-family: "Reenie Beanie", arial, sans-serif;
+	font-size: 100%;
+}
+
+ul li: nth-child(even) a {
+	-o-transform: rotate(4deg);
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	position: relative;
+	top: 5px;
+	background: #cfc
+}
+
+ul li: nth-child(3n) a{
+	-o-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	position: relative;
+	top: -5px;
+	background: #ccccff;
+}
+
+ul li: nth-child(5n) a{
+	-o-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	position: relative;
+	top: -10px;
+}
+
+h1 { 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	font-size: 18px; 
+	font-weight: bold; 
+	color: #000000; 
+	border-bottom: 2px solid #000000;
+} 
+
+h2 { 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	font-size: 18px;
+	font-weight: bold; 
+	color: #000000; 
+	border-bottom: 2px solid #000000; 
+} 
+
+/**************** Pseudo classes ****************/ 
+
+: link { 
+	color: #000000; 
+	text-decoration: underline;
+	font-weight: bold; 
+} 
+
+li : link {
+	color: #000000; 
+	text-decoration: none; 
+	font-weight: bold; 
+} 
+
+: visited {
+	color: #000000;
+	text-decoration: underline; 
+	font-weight: bold; 
+} 
+
+li : visited {
+	color: #000000; 
+	text-decoration: none; 
+	font-weight: bold; 
+} 
+
+: hover {
+	color: rgb(0, 96, 255); 
+	padding-bottom: 5px; 
+	font-weight: bold;
+	text-decoration: underline; 
+} 
+
+li : hover { 
+	display: block; 
+	color: rgb(0, 96, 255); 
+	padding-bottom: 5px; 
+	font-weight: bold; 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	border-bottom-color: #C6EC8C; 
+} 
+
+: active { 
+	color: rgb(255, 0, 102); 
+	font-weight: bold; 
+} 
+
+/************************* ID's *************************/ 
+
+#navigation { 
+	position: absolute;
+	z-index: 10; 
+	width: 210px; 
+	height: 950px; 
+	margin: 0; 
+	margin-top: 50px; 
+	border-right: 5px solid #000000; 
+	font-weight: normal;
+	background: url("cork.jpeg") left repeat-y; 
+} 
+
+#centerDoc { 
+	position: absolute; 
+	padding: 0 0 20px 235px; /*top right bottom left*/
+	width: 70%;	
+	height:920px;
+	margin-top: 50px;
+	margin-right: 50px;
+	border-right: 2px solid #000000;
+	border-top: 2px solid #000000; 
+}
+
+#logout {
+	position: absolute;
+	padding: 0 0 50px 40px;
+	width: 170px;
+	height: 60px;
+	margin-top: 10px;
+	border-top: 2px solid #000000;
+	border-bottom: 2px solid #000000;
+	border-right: 2px solid #000000;
+	border-left: 2px solid #000000;
+}
+

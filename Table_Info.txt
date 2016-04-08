@@ -1,0 +1,91 @@
+create table students(sid int(20) NOT NULL PRIMARY KEY,
+password varchar(100), f_name varchar(20), l_name varchar(30),
+email varchar(100), major varchar(10));
+
+create table courses(cid int(20) NOT NULL, iid int(20) NOT NULL,
+c_name varchar(10), start_time int, end_time int,
+c_day varchar(10), semester varchar(20), location varchar(10),
+PRIMARY KEY (cid, iid));
+
+create table instructors(iid int(20) NOT NULL PRIMARY KEY,
+password varchar(100), f_name varchar(20), l_name varchar(30),
+email varchar(100), department varchar(10));
+
+create table enrollments(sid int(20) NOT NULL, cid int(20)
+NOT NULL, iid int(20) NOT NULL, PRIMARY KEY(sid, cid, iid));
+
+
+INSERT INTO students values
+(100000, "pass", "Mary", "Lee", "merry_lee@waple.com", "CS"),
+(100001, "pass", "Mike", "Lee", "mike_lee@grapes.com", "IT"),
+(100002, "pass", "John", "Li", "john_li@woogle.com", "MATH"),
+(100003, "pass", "Mary", "Edwards", "mary_edwards@prions.com", "PHYS"),
+(100004, "pass", "Maxwell", "Jones", "maxwell_jones@jade.com", "CS"),
+(100005, "pass", "Johnny", "Small", "johnny_small@midget.com", "IT"),
+(100006, "pass", "Uday", "Verma", "uday_verma@potatoe.com", "MATH"),
+(100007, "pass", "Jeewan", "Verma", "jeewana_verma@crayon.com", "PHYS"),
+(100008, "pass", "Wei", "Wang", "wei_wang@limbo.com", "CS"),
+(100009, "pass", "Mary", "Jones", "mary_jones@ninja.com", "IT"),
+(100010, "pass", "Alison", "Lee", "alison_lee@noodle.com", "MATH"),
+(100011, "pass", "Linda", "Zhao", "linda_zhao@fun.com", "PHYS"),
+(100012, "pass", "David", "Williams", "david_williams@hampster.com", "CS"),
+(100013, "pass", "Seth", "Martin", "seth_martin@guitar.com", "IT"),
+(100014, "pass", "Tom", "Armstrong", "tom_armstrong@bicycle.com", "MATH"),
+(100015, "pass", "Charles", "Letterman", "charles_letterman@shoehorn.com", "CS"),
+(100016, "pass", "Paula", "Goodman", "paula_goodman@apple.com", "IT"),
+(100017, "pass", "Paul", "Goodwill", "paul_goodwill@shrimp.com", "MATH");
+
+INSERT INTO courses values
+(200000, 300002, "MATH1313", 930, 1045, "TR", "FALL", "BH201"),
+(200001, 300004, "CS1013", 1330, 1445, "MW", "FALL", "HW206"),
+(200002, 300001, "IT1004", 800, 915, "TR", "FALL", "HW201"),
+(200003, 300006, "MATH1513", 930, 1045, "MW", "FALL", "BH106"),
+(200004, 300007, "PHYS1004", 1400, 1515, "TR", "FALL", "SC201"),
+(200005, 300002, "MATH1513", 1515, 1630, "MW", "FALL", "BH201"),
+(200006, 300008, "CS2001", 1030, 1145, "TR", "FALL", "HW201");
+
+INSERT INTO instructors values
+(300000, "pass", "Lance", "Lee", "lance_lee@cameron.edu", "CS"),
+(300001, "pass", "Ivan", "Drago", "ivan_drago@cameron.edu", "IT"),
+(300002, "pass", "Mike", "Lu", "mike_lu@cameron.edu", "MATH"),
+(300003, "pass", "Johnathan", "Smith", "jonathan_smith@cameron.edu", "PHYS"),
+(300004, "pass", "Davis", "Lee", "davis_lee@cameron.edu", "CS"),
+(300005, "pass", "Mary", "Jones", "mary_jones@cameron.edu", "IT"),
+(300006, "pass", "Wei", "Wang", "wei_wang@cameron.edu", "MATH"),
+(300007, "pass", "Antonio", "Martos", "antonio_martos@cameron.edu", "PHYS"),
+(300008, "pass", "Park", "Jones", "park_jones@cameron.edu", "CS");
+
+INSERT INTO enrollments values
+(100000, 200000, 300002),
+(100001, 200000, 300002),
+(100002, 200000, 300002),
+(100003, 200000, 300002),
+(100004, 200000, 300002),
+(100001, 200001, 300004),
+(100002, 200001, 300004),
+(100005, 200001, 300004),
+(100008, 200001, 300004),
+(100010, 200001, 300004),
+(100001, 200002, 300001),
+(100002, 200002, 300001),
+(100010, 200002, 300001),
+(100004, 200002, 300001),
+(100005, 200002, 300001),
+(100001, 200003, 300006),
+(100015, 200003, 300006),
+(100011, 200003, 300006),
+(100017, 200006, 300008),
+(100009, 200006, 300008),
+(100010, 200006, 300008),
+(100007, 200006, 300008),
+(100014, 200006, 300008),
+(100009, 200004, 300007),
+(100010, 200004, 300007),
+(100002, 200004, 300007),
+(100000, 200005, 300002),
+(100007, 200005, 300002),
+(100008, 200005, 300002),
+(100009, 200005, 300002),
+(100010, 200005, 300002),
+(100011, 200005, 300002),
+(100012, 200005, 300002);
